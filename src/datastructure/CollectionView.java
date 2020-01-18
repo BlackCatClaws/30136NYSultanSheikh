@@ -1,14 +1,15 @@
+
+
 package datastructure;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CollectionView {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         /*
-         Map is created and inserted some data.Retrieve the Collection view of values present in map
+         Map has been made and data is inserted. Retrieve the Collection view of values is present in the map
          */
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "NYC");
@@ -18,8 +19,10 @@ public static void main(String[] args) {
         map.put(5, "San Jose");
         map.put(6, "Seattle");
 
+        System.out.println("Collection view of values present in map ");
 
-
+        for (Map.Entry entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
     }
-
 }
